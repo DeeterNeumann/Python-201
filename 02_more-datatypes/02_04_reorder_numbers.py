@@ -6,3 +6,19 @@
 #
 # Example input:  1,2,3,4,5,6,7,8,9,10
 # Example output: 2,4,6,8,10,9,7,5,3,1
+
+
+user_input_list = []
+
+nums = 10
+
+while nums > 0:
+    i = input("Please enter a number: ")
+    user_input_list.append(i)
+    nums -= 1
+
+print(user_input_list)
+
+print(user_input_list[1::2])
+
+print(user_input_list[-2::-2])
