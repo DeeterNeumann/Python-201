@@ -4,3 +4,11 @@
 
 s = {1, 2, 3, 4}
 t = {3, 4, 5, 6}
+
+r = s.intersection(t)
+
+print(r)
+
+u = s.union(t)
+
+print(u)
