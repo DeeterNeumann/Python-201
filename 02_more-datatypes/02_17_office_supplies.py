@@ -22,3 +22,11 @@ office = [
     {"full_name": "Creed Bratton", "item": "mung beans"},
     {"full_name": "Darryl Philbin", "item": "forklift"},
 ]
+
+sorted_office = sorted(office, key = lambda dict: len(dict["full_name"]))
+
+for dict in sorted_office:
+    office_item = dict.get("item")
+    name = dict.get("full_name").split()
+    name_office_item = f"{name[1]}, {name[0]}     {office_item}"
+    print(name_office_item)
