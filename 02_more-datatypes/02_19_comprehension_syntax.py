@@ -6,3 +6,7 @@
 # but try to do it using a list comprehension.
 
 word = "codingnomads"
+
+letters = [char for char in word]
+
+print(letters)
