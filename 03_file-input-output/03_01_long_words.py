@@ -14,5 +14,7 @@ for w in words:
     if len(w) > 20:
         more_than_20.append(w)
 
-with open("words.txt", "w") as fout:
+print(more_than_20)
+
+with open("20 letter words.txt", "w+") as fout:
     fout.write("\n".join(more_than_20))
