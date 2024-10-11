@@ -22,31 +22,3 @@ with drneu.open(mode = "a", newline = "") as csvfile:
         countwriter.writerow([ext, count])
 
 print(file_counter)
-
-
-# for filepath in drneu.iterdir():
-#     if filepath.suffix not in file_counter:
-#         file_counter[filepath.suffix] = []
-#     file_counter[filepath.suffix].append(filepath)
-
-# for file_type, file_list in file_counter.items():
-#     if len(file_list) >= 5:
-#         new_folder_path = drneu.joinpath(file_type)
-#         new_folder_path.mkdir(exist_ok=True)
-#         for file in file_list:
-#             new_file_path = new_folder_path.joinpath(file.name)
-#             file.replace(new_file_path)
-
-# with open("all_words.txt", "r") as fin:
-#     for word in fin.readlines():
-#         word = word.rstrip()
-#         words.append(word)
-
-# # print(words)
-
-# words.reverse() # why can't I assign this to a new variable? e.g., words_reversed = words.reverse()
-
-# # print(words)
-
-# with open("all_words_reverse.txt", "w+") as fout:
-#     fout.write("\n".join(words))
