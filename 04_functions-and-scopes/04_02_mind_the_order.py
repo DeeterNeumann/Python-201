@@ -3,7 +3,7 @@
 
 def skydive(step_1, step_2):
     print("For your own safety, please follow the instructions carefully:")
-    print(f"1. {step_1}")
-    print(f"2. {step_2}")
+    instructions = f"1. {step_1}, 2. {step_2}"
+    return instructions
 
-skydive("JUMP!", "Take your parachute.")
+print(skydive("JUMP!", "Take your parachute."))
