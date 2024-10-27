@@ -2,7 +2,7 @@
 # Define a function called `my_enumerate()` that takes an iterable as input
 # and gives back both the element as well as its index position as an integer.
 
-def my_enumerate(list, start = 0):
+def my_enumerate(list):
     course_index = -1
     for course in courses:
         course_index += 1
