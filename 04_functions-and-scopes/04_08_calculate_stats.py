@@ -13,7 +13,7 @@ def stats(example_list):
       elif number > max:
         max = number
     maximum = f"The maximum is {max}."
-    return maximum
+    return maximum # better to return number and modify it outside (e.g., return max)
   def minimum(example_list):
     min = None
     for number in example_list:
@@ -32,7 +32,7 @@ def stats(example_list):
     tot_sum = sum
     average = sum / count
     avg_sum = f"The average is {average}. The sum is {tot_sum}."
-    return avg_sum
+    return avg_sum # return as tuple
   max_stats = maximum(example_list)
   min_stats = minimum(example_list)
   avg_sum_stats = average_sum(example_list)
@@ -40,3 +40,5 @@ def stats(example_list):
   return statistics
 
 print(stats(example_list))
+
+# Don't build the string inside the function. Return the number you need and then use it to build outside
