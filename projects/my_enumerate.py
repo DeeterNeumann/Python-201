@@ -2,13 +2,14 @@
 # Define a function called `my_enumerate()` that takes an iterable as input
 # and gives back both the element as well as its index position as an integer.
 
-def my_enumerate(list):
-    course_index = -1
-    for course in courses:
-        course_index += 1
-        print(f"{course_index}: {course} Python")
-        
 courses = ['Intro', 'Intermediate', 'Advanced', 'Professional']
+
+def my_enumerate(list):
+    indexes = range(len(courses))
+    for index, course in zip(indexes, courses):
+        (i, c) = (index, course)
+        course_offering = print(f"{i}: {c} Python")
+    return course_offering
 
 my_enumerate(courses)
 
