@@ -5,7 +5,7 @@
 # in a circular way.
 
 def grocery_list(meat, *sides):
-    grocery_list = ", ".join(sides)
+    grocery_list = join_sides(sides)
     groceries = f"{meat}, {grocery_list}"
     return groceries
 
@@ -19,14 +19,19 @@ def recipe(meat, *sides):
     Returns:
         dinner = the type of bread on the bottom, toppings, and another slice of bread on top.
     """
-    side_dish = ", ".join(sides) #only works with list of strings or items that can be turned into strings
+    side_dish = join_sides(sides) #only works with list of strings or items that can be turned into strings
     dish = f"{meat} with {side_dish}"
     return dish
 
-def dinner_invite(name, dish, groceries):
+def dinner_invite(name, main, *sides):
+    groceries = grocery_list(main, *sides)
+    dish = recipe("chicken", *sides)
     invite = f"{name}, please join us for {dish}. I've picked up the {groceries}."
     return invite
 
+def join_sides(sides):
+    return ", ".join(sides)
+
 sides = "corn, potatoes, asparagus".replace(" ", "").split(",")
 
-print(dinner_invite("Watson", recipe("chicken", *sides), grocery_list("chicken", *sides)))
+print(dinner_invite("Watson", "chicken", *sides))
