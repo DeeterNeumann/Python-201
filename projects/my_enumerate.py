@@ -4,14 +4,19 @@
 
 courses = ['Intro', 'Intermediate', 'Advanced', 'Professional']
 
-def my_enumerate(list):
-    indexes = range(len(courses))
-    for index, course in zip(indexes, courses):
-        (i, c) = (index, course)
-        course_offering = print(f"{i}: {c} Python")
-    return course_offering
+# indexes = list(range(len(courses)))
 
-my_enumerate(courses)
+# print(indexes)
+
+def my_enumerate(input_list):
+    indexes = list(range(len(input_list)))
+    enumerate_output_list = []
+    for index, item in zip(indexes, input_list):
+        enumerate_output_list.append((index, item))
+    return enumerate_output_list
+
+for i, c in my_enumerate(courses):
+    print(f"{i}: {c} Python")
 
 
 # OUTPUT:
