@@ -10,3 +10,7 @@
 
 s = {1, 2, 3, 4}
 t = {2, 3, 4, 5, 7}
+
+squared_set = {x**2 for x in s | t if x > 2}
+
+print(squared_set)
