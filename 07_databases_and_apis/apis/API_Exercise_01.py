@@ -18,8 +18,8 @@ import requests
 base_url = "http://demo.codingnomads.co:8080/tasks_api/users"
 response = requests.get(base_url)
 
-print(response.status_code)
-print(response.encoding)
-print(response.text)
+print(f"Response Status Code: {response.status_code}")
+print(f"Response Encoding: {response.encoding}")
+print(f"Response Text: {response.text}")
 
 
